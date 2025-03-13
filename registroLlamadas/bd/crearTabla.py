@@ -39,10 +39,11 @@ def creaTabla():
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS llamadasTelefonicas (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id_persona INTEGER NOT NULL,
             fecha_llamada TEXT NOT NULL,
             hora_llamada TEXT NOT NULL,
             resumen TEXT NOT NULL,
-            FOREIGN KEY (id_persona) REFERENCES personas (id)
+            FOREIGN KEY (id_persona) REFERENCES empleados (id)
         )
     ''')
     conx.commit()

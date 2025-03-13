@@ -8,13 +8,16 @@ Created on Wed Mar 12 13:46:41 2025
 Este es el main, el script principal del programa
 """
 
-from sys import path 
+#from sys import path 
 
-path.append("funcionesRegistroLlamadas")
+#path.append("funcionesRegistroLlamadas")
 
+#from registroLlamadas.bd.crearTabla import creaTabla
+#import registroLlamadas
 
-import funcionesRegistroLlamadas.crearTabla.crearTabla
+#registroLlamadas.bd.crearTabla.creaTabla()
 
-funcionesRegistroLlamadas.crearTabla.crearTabla()
+from registroLlamadas.bd.crearTabla import creaTabla
 
+creaTabla()
 
