@@ -11,6 +11,7 @@ Este modulo tiene la funcion de registrar empleado  en la base de datoss
 from datetime import datetime
 import sqlite3
 
+# Funcionque agrega un empleado a la base de datos, el usuario pone sus datos  y el cursor lo agrega a la tabla 
 def creaEmpleado():
     conx=sqlite3.connect("log_llamadas.db")
     cursor=conx.cursor()

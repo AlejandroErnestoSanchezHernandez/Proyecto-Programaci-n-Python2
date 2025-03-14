@@ -11,6 +11,8 @@ from datetime import datetime
 import sqlite3
 from.creaEmpleado import creaEmpleado
 
+#Esta funcion permite al usuario registrar una llamada, primero hace un select en la base de datos, si no hay una persona lo indica
+# en caso contrario pregunta por el id de la persona que hará el registro (si no es valido el id lo indica). Acto seguido 
 def regLlamada():
     conx=sqlite3.connect("log_llamadas.db")
     cursor=conx.cursor()    
