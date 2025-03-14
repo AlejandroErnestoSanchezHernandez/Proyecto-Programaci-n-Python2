@@ -29,8 +29,8 @@ def regLlamada():
     
     while True:
         
-        id_persona = input("Ingrese el ID de la persona a la que llamó: ")
-        cursor.execute("SELECT id FROM empleados WHERE id = ?", (id_persona,))
+        idPersona = input("Ingrese el ID de la persona a la que llamó: ")
+        cursor.execute("SELECT id FROM empleados WHERE id = ?", (idPersona,))
         if cursor.fetchone():
             break
         print("ID no válido. ¿Deseas registrar una nueva persona?")
@@ -44,14 +44,14 @@ def regLlamada():
         elif opcion == "3":
             return
     
-    fecha_llamada = input(f"Fecha de la llamada (YYYY-MM-DD) [Por defecto: {datetime.now().strftime('%Y-%m-%d')}]: ") or datetime.now().strftime('%Y-%m-%d')
-    hora_llamada = input(f"Hora de la llamada (HH:MM) [Por defecto: {datetime.now().strftime('%H:%M')}]: ") or datetime.now().strftime('%H:%M')
+    fecha_Llamada = input(f"Fecha de la llamada (YYYY-MM-DD) [Por defecto: {datetime.now().strftime('%Y-%m-%d')}]: ") or datetime.now().strftime('%Y-%m-%d')
+    hora_Llamada = input(f"Hora de la llamada (HH:MM) [Por defecto: {datetime.now().strftime('%H:%M')}]: ") or datetime.now().strftime('%H:%M')
     resumen = input("Resumen de la llamada: ")
     
     cursor.execute('''
-        INSERT INTO llamadasTelefonicas (id_persona, fecha_llamada, hora_llamada, resumen)
+        INSERT INTO llamadasTelefonicas (id_Persona, fecha_llamada, hora_llamada, resumen)
         VALUES (?, ?, ?, ?)
-    ''', (id_persona, fecha_llamada, hora_llamada, resumen))
+    ''', (idPersona, fecha_Llamada, hora_Llamada, resumen))
     conx.commit()
     conx.close()
     print("\nLlamada registrada exitosamente.\n")
