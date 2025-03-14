@@ -12,11 +12,11 @@ para almacenar los registros de las llamadas de una empresa
 import sqlite3
 
 def creaTabla():
-    conx=sqlite3.connect("log_llamadas")
+    conx=sqlite3.connect("log_llamadas.db")
     cursor=conx.cursor()
     
     cursor.execute('''
-        CREATE TABLE IF NOT EXISTS empleados (
+        CREATE TABLE IF NOT EXISTS empleados(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nombre TEXT NOT NULL,
             primer_apellido TEXT NOT NULL,
@@ -37,7 +37,7 @@ def creaTabla():
     ''')
     
     cursor.execute('''
-        CREATE TABLE IF NOT EXISTS llamadasTelefonicas (
+        CREATE TABLE IF NOT EXISTS llamadasTelefonicas(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             id_persona INTEGER NOT NULL,
             fecha_llamada TEXT NOT NULL,
@@ -46,6 +46,14 @@ def creaTabla():
             FOREIGN KEY (id_persona) REFERENCES empleados (id)
         )
     ''')
+    
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+    tablas = cursor.fetchall()
+
+    print("Tablas en la base de datos:")
+    for tabla in tablas:
+        print(tabla[0])
+    
     conx.commit()
     conx.close()
     
