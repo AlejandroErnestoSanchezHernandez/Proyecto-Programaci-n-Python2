@@ -9,7 +9,7 @@ Este modulo permite al usuario el poder ver las llamadas realizadas
 """
 import sqlite3
 
-def VerLlamadas():
+def verLlamadas():
     conx = sqlite3.connect("log_llamadas.db")
     cursor = conx.cursor()
     cursor.execute('''

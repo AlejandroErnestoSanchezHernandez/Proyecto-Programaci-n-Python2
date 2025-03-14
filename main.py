@@ -20,8 +20,10 @@ Este es el main, el script principal del programa
 from registroLlamadas.bd.crearTabla import creaTabla
 from registroLlamadas.registros.creaEmpleado import creaEmpleado
 from registroLlamadas.registros.regLlamada import regLlamada
-from registroLlamadas.verRegistros.verLlamadas import VerLlamadas
+from registroLlamadas.verRegistros.verLlamadas import verLlamadas
 from registroLlamadas.verRegistros.verPersonas import verPersonas
+from registroLlamadas.registros.editarLlamada import elimnarLlamada
+from registroLlamadas.registros.editarLlamada import modLlamada
 import os
 #import datetime.datetime
 
@@ -37,7 +39,9 @@ def main():
         print("2. Registro llamada")
         print("3. Ver personas registradas")
         print("4. Ver registros de llamadas")
-        print("5. Salir")
+        print("5. Modificar llamada")
+        print("6. Eliminar llamada")
+        print("7. Salir")
 
         opcion = input("Selecciona una opción: ")
 
@@ -51,9 +55,15 @@ def main():
             verPersonas()
             contador+=1
         elif opcion == "4":
-            VerLlamadas()
+            verLlamadas()
             contador+=1
         elif opcion == "5":
+            contador+=1
+            modLlamada()
+        elif opcion == "6":
+            contador+=1    
+            elimnarLlamada()
+        elif opcion == "7":
             print("Saliendo del programa...")
             break
         else:
