@@ -1,7 +1,11 @@
-** Proyecto-Programaci-n-Python2**
+**Registro de llamadas telefonicas**
+
+
 Este proyecto es un programa para el registro de llamadas de una empresa de computo (CRM), usando una base de datos sqllite3
 
 **Caracteristicas**
+
+
 Este proyecto permite agregar :
 - Nuevos usuarios
 - Registrar llamadas
