@@ -59,9 +59,18 @@ def modLlamada():
             break
         print("[red]ID no válido. Intenta nuevamente.[/red]")
         
-    fechaLlamada = consola.input(f"[dark_cyan]Fecha de la llamada (YYYY-MM-DD) [Por defecto: {datetime.now().strftime('%Y-%m-%d')}]: [/dark_cyan]") or datetime.now().strftime('%Y-%m-%d')
+    #fechaLlamada = consola.input(f"[dark_cyan]Fecha de la llamada (YYYY-MM-DD) [Por defecto: {datetime.now().strftime('%Y-%m-%d')}]: [/dark_cyan]") or datetime.now().strftime('%Y-%m-%d')
+    #horaLlamada = consola.input(f"[dark_cyan]Hora de la llamada (HH:MM) [Por defecto: {datetime.now().strftime('%H:%M')}]: [/dark_cyan]") or datetime.now().strftime('%H:%M')
+    
+    fechaLlamada = consola.input(f"[dark_cyan]Fecha de la llamada (DD-MM-YY) [Por defecto: {datetime.now().strftime('%d-%m-%Y')}]: [/dark_cyan]") or datetime.now().strftime('%d-%m-%Y')
     horaLlamada = consola.input(f"[dark_cyan]Hora de la llamada (HH:MM) [Por defecto: {datetime.now().strftime('%H:%M')}]: [/dark_cyan]") or datetime.now().strftime('%H:%M')
     resumen = consola.input("[dark_cyan]Resumen de la llamada: [/dark_cyan]")
+    
+    #try:
+    #        datetime.strptime(horaLlamada, "%H:%M")  # Validar formato
+    #        return horaLlamada
+    #except ValueError:
+    #        consola.print("[red]Formato inválido. Usa HH:MM.[/red]")
     
     cursor.execute("""
         UPDATE llamadasTelefonicas 

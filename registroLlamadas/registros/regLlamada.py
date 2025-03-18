@@ -60,7 +60,7 @@ def regLlamada():
         elif opcion == "3":
             return
     
-    fecha_Llamada = consola.input(f"[dark_cyan]Fecha de la llamada (YYYY-MM-DD) [Por defecto: {datetime.now().strftime('%Y-%m-%d')}]: [/dark_cyan]") or datetime.now().strftime('%Y-%m-%d')
+    fecha_Llamada = consola.input(f"[dark_cyan]Fecha de la llamada (DD-MM-YY) [Por defecto: {datetime.now().strftime('%d-%m-%Y')}]: [/dark_cyan]") or datetime.now().strftime('%d-%m-%Y')
     hora_Llamada = consola.input(f"[dark_cyan]Hora de la llamada (HH:MM) [Por defecto: {datetime.now().strftime('%H:%M')}]: [/dark_cyan]") or datetime.now().strftime('%H:%M')
     resumen = consola.input("[dark_cyan]Resumen de la llamada: [/dark_cyan]")
     
