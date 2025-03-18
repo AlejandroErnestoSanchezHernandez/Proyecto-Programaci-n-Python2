@@ -50,9 +50,9 @@ def creaTabla():
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
     tablas = cursor.fetchall()
 
-    print("Tablas en la base de datos:")
-    for tabla in tablas:
-        print(tabla[0])
+    #print("Tablas en la base de datos:")
+    #for tabla in tablas:
+    #    print(tabla[0])
     
     conx.commit()
     conx.close()

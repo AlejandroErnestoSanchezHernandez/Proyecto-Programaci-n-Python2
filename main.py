@@ -25,25 +25,29 @@ from registroLlamadas.verRegistros.verPersonas import verPersonas
 from registroLlamadas.registros.editarLlamada import elimnarLlamada
 from registroLlamadas.registros.editarLlamada import modLlamada
 import os
-#import datetime.datetime
+from rich.console import Console
+from rich import print
+
+limp=False
 
 def main():
     creaTabla()
     contador = 0 
+    consola = Console()
 
     while True:
        
-        print("\n--- Menú ---")
-        print("Versión del programa: 0.5.0")
-        print("1. Registrpo persona")
-        print("2. Registro llamada")
-        print("3. Ver personas registradas")
-        print("4. Ver registros de llamadas")
-        print("5. Modificar llamada")
-        print("6. Eliminar llamada")
-        print("7. Salir")
+        print("[yellow]\n--- Menú ---[/yellow]")
+        print("[bright_magenta]Versión del programa:[/bright_magenta] 0.5.0")
+        print("1. [green]Registro persona[/green]")
+        print("2. [green]Registro llamada[/green]")
+        print("3. [green]Ver personas registradas[/green]")
+        print("4. [green]Ver registros de llamadas[/green]")
+        print("5. [green]Modificar llamada[/green]")
+        print("6. [green]Eliminar llamada[/green]")
+        print("7. [red]Salir[/red]")
 
-        opcion = input("Selecciona una opción: ")
+        opcion = consola.input("[dark_cyan]Selecciona una opción: [/dark_cyan]")
 
         if opcion == "1":
             creaEmpleado()
@@ -71,11 +75,15 @@ def main():
             contador+=1
          # Limpiar la terminal
         if contador == 3:
-            os.system('cls' if os.name == 'nt' else 'clear')    
-        #print(contador)    
+            limp=True
+            
 
 if __name__ == "__main__":
     main()
 
-
+"""
+if limp:
+    os.system('cls' if os.name == 'nt' else 'clear')    
+    main()
+"""
 
