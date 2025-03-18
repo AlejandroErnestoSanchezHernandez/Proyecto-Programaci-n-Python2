@@ -29,6 +29,7 @@ def verPersonas():
     tabla.add_column("ID",justify="center", style="cyan")
     tabla.add_column("Persona", justify="center", style="cyan")
     tabla.add_column("Telefono", justify="center", style="cyan")
+    tabla.add_column("Extension", justify="center", style="cyan")
     tabla.add_column("Celular", justify="center", style="cyan")
     tabla.add_column("Correo", justify="center", style="cyan")
     tabla.add_column("Empresa", justify="center", style="cyan")
