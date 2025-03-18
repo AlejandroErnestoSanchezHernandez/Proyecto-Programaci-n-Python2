@@ -28,7 +28,7 @@ import os
 from rich.console import Console
 from rich import print
 
-limp=False
+
 
 def main():
     creaTabla()
@@ -36,7 +36,8 @@ def main():
     consola = Console()
 
     while True:
-       
+        if contador % 4 == 0:
+            os.system('cls' if os.name == 'nt' else 'clear')
         print("[yellow]\n--- Menú ---[/yellow]")
         print("[bright_magenta]Versión del programa:[/bright_magenta] 0.5.0")
         print("1. [green]Registro persona[/green]")
@@ -73,17 +74,10 @@ def main():
         else:
             print("Opción no válida. Inténtalo de nuevo.")
             contador+=1
-         # Limpiar la terminal
-        if contador == 3:
-            limp=True
-            
-
+        print(contador)    
+         
 if __name__ == "__main__":
     main()
 
-"""
-if limp:
-    os.system('cls' if os.name == 'nt' else 'clear')    
-    main()
-"""
+
 

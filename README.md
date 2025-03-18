@@ -16,7 +16,12 @@ Este proyecto permite agregar :
 - Salir del programa
 
 **Pensado para Sistemas operativos GNU/Linux y Windows**
-Este programa esta pensado para ejecutarse tanto en Sistemas operativos Linux como Windows, no necesita de alguna Caracteristica exclusiva del sistema, para algunas de sus funciones hace uso de la libreria os (para asegurar la funcionalidad y compatibilidad en ambos sistemas Operativos).
+Este programa esta pensado para ejecutarse tanto en Sistemas operativos Linux como Windows, no necesita de alguna Caracteristica exclusiva del sistema, para algunas de sus funciones hace uso de la libreria rich, se tiene ele archivo rich.txt para instalar las dependencias necesarias para poder ejecutar correctamente el proyecto.
 
-**Proyecto en construcción**
-Este proyecto aun no esta finalizado, por ende algunas Caracteristica pueden estar , pero no implementadas (por ejemplo estar comentadas), se continuará con el desarrollo en los siguientes dias.
+**Tecnologias usadas:**
+
+- SQLite3
+- Rich (para mejorar la visualización en la terminal?
+
+
+
