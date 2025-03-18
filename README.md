@@ -23,5 +23,6 @@ Este programa esta pensado para ejecutarse tanto en Sistemas operativos Linux co
 - SQLite3
 - Rich (para mejorar la visualización en la terminal?
 
+** Para instalar las dependencias**
 
-
+Se tiene que ejecutar el comando pip install -r requirements.txt
